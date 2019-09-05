@@ -1,5 +1,7 @@
 {
   "name": "firebaseAzure",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
