@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-// import * as firebase from 'firebase/app';
-// import 'firebase/auth';
-
-import { firebase } from '@firebase/app';
-
-import '@firebase/auth';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +25,9 @@ export class HomePage {
   }
 
   logout() {
-    firebase.auth().signOut();
+    firebase.auth()
+        .signOut()
+        .then(() => console.log('logged out'))
+        .catch(console.log);
   }
 }
